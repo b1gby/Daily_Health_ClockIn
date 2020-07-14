@@ -8,9 +8,12 @@ xmu_pwd = "pwd"
 
 # some chrome options
 chrome_options = Options()
+chrome_options.add_argument("--remote-debugging-port=9222")
 chrome_options.add_argument('--no-sandbox') #让Chrome在root权限运行
 chrome_options.add_argument('--disable-dev-shm-usage') #不打开图形界面
+chrome_options.add_argument('window-size=1920x3000')
 chrome_options.add_argument('--headless') #浏览器不提供可视化页面
+chrome_options.add_argument('--hide-scrollbars')
 chrome_options.add_argument('blink-settings=imagesEnabled=false') #不加载图片, 提升速度
 chrome_options.add_argument('--disable-gpu') #谷歌文档提到需要加上这个属性来规避bug
 
